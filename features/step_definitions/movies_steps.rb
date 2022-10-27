@@ -25,5 +25,6 @@ Then /I should see all the movies/ do
 end
 
 Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
+  movie = Movie.find_by(title: arg1)
+  expect(movie.director).to eq(arg2)
 end

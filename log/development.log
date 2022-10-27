@@ -68,3 +68,588 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (18.7ms)
   Rendered layouts/_flash.erb (0.5ms)
 Completed 200 OK in 438ms (Views: 411.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 160.39.215.228 at 2022-10-26 02:07:47 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.8ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 296ms (Views: 266.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/movies/4" for 160.39.215.228 at 2022-10-26 02:07:52 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:49:03 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered movies/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 225ms (Views: 190.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search.4" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:49:07 +0000
+Processing by MoviesController#search_directors as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/models/movie.rb:3:in `search_same_director'
+  app/controllers/movies_controller.rb:43:in `search_directors'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/search.4" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:50:35 +0000
+Processing by MoviesController#search_directors as 
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/models/movie.rb:3:in `search_same_director'
+  app/controllers/movies_controller.rb:43:in `search_directors'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.4ms)
+
+
+Started GET "/search.4" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:50:57 +0000
+Processing by MoviesController#search_directors as 
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.3ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/models/movie.rb:3:in `search_same_director'
+  app/controllers/movies_controller.rb:43:in `search_directors'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.6ms)
+
+
+Started GET "/" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:52:45 +0000
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:52:45 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (8.5ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 226ms (Views: 225.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:52:50 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:57:09 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 205ms (Views: 172.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search.1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 04:57:12 +0000
+Processing by MoviesController#search as 
+  Rendered movies/search.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <!--  app/views/movies/search.html.erb -->
+    2: <h2>Movies With Same Director As <em><%= @movie.title %></em></h2>
+    3: 
+    4: <ul id="search_results">
+    5:   <li>
+  app/views/movies/search.html.erb:2:in `_app_views_movies_search_html_erb___3226105027426982081_70043616734020'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.9ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:01:09 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 253ms (Views: 218.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search.1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:01:11 +0000
+Processing by MoviesController#search as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/models/movie.rb:3:in `search_same_director'
+  app/controllers/movies_controller.rb:43:in `search'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:04:44 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 287ms (Views: 242.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:04:46 +0000
+Processing by MoviesController#search as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/models/movie.rb:3:in `search_same_director'
+  app/controllers/movies_controller.rb:43:in `search'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.0ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:05:56 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 218ms (Views: 185.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:05:58 +0000
+Processing by MoviesController#search as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  Rendered movies/search.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6:     Director:
+     7:     <%= @movie.director %>
+     8:   </li>
+     9:   <% @movies.each do |movie| %>
+    10:     <li>
+    11:       <%= movie.title %>
+    12:     </li>
+  app/views/movies/search.html.erb:9:in `_app_views_movies_search_html_erb__823616646009269143_70174143519180'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.5ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:07:39 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 277ms (Views: 230.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:07:40 +0000
+Processing by MoviesController#search as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  Rendered movies/search.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6:     Director:
+     7:     <%= @movie.director %>
+     8:   </li>
+     9:   <% @same_director_movies.each do |movie| %>
+    10:     <li>
+    11:       <%= movie.title %>
+    12:     </li>
+  app/views/movies/search.html.erb:9:in `_app_views_movies_search_html_erb__4312754878036659412_70238626371260'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.2ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:11:40 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 242ms (Views: 209.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:11:42 +0000
+Processing by MoviesController#search as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  Rendered movies/search.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     6:     Director:
+     7:     <%= @movie.director %>
+     8:   </li>
+     9:   <% @same_director_movies.each do |movie| %>
+    10:     <li>
+    11:       <%= movie.title %>
+    12:     </li>
+  app/views/movies/search.html.erb:9:in `_app_views_movies_search_html_erb___2944852867121114157_69860031762100'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.6ms)
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:14:21 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 234ms (Views: 213.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:14:23 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:14:24 +0000
+Processing by MoviesController#search as 
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/search.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:17:42 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 236ms (Views: 214.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:17:44 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:17:45 +0000
+Processing by MoviesController#search as 
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Movie with 'id'=Aladdin):
+  app/controllers/movies_controller.rb:43:in `search'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.4ms)
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:18:35 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.4ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 244ms (Views: 222.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:18:37 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:18:38 +0000
+Processing by MoviesController#search as 
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" IS NULL[0m
+  Rendered movies/search.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:21:02 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 231ms (Views: 198.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/search.Aladdin" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:21:03 +0000
+Processing by MoviesController#search as 
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1  [["title", "Aladdin"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" = ? LIMIT 1[0m  [["title", "Aladdin"]]
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" IS NULL
+  Rendered movies/search.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:24:24 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 209ms (Views: 187.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/movies/2" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:24:27 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search/The%20Terminator" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:24:28 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"id"=>"The Terminator"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/controllers/movies_controller.rb:43:in `search'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.3ms)
+
+
+Started GET "/search/The%20Terminator" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:25:00 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"id"=>"The Terminator"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/controllers/movies_controller.rb:43:in `search'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.4ms)
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:25:13 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 199ms (Views: 178.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:25:14 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search/1" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:25:15 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."title" IS NULL LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `director' for nil:NilClass):
+  app/controllers/movies_controller.rb:43:in `search'
+
+
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/codio/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.6ms)
+
+
+Started GET "/movies" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:27:16 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.9ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 302ms (Views: 269.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/movies/5" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:27:18 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered movies/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search/5" for 2600:4040:939c:c200:a87e:d93c:2760:bd5e at 2022-10-26 05:27:19 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" IS NULL
+  Rendered movies/search.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:17:57 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (22.4ms)
+  Rendered layouts/_flash.erb (0.7ms)
+Completed 200 OK in 356ms (Views: 322.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/movies/1" for 160.39.214.127 at 2022-10-26 20:17:59 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 23ms (Views: 14.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:18:01 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies/4" for 160.39.214.127 at 2022-10-26 20:18:38 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered movies/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:18:48 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:19:56 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 299ms (Views: 269.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/movies/5" for 160.39.214.127 at 2022-10-26 20:20:02 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered movies/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 16.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:20:09 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:39:16 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 255ms (Views: 231.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/movies/1" for 160.39.214.127 at 2022-10-26 20:39:18 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered movies/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/search/1" for 160.39.214.127 at 2022-10-26 20:39:20 +0000
+Processing by MoviesController#search as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://parentsonata-bankorion-3000.codio.io/movies
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/movies" for 160.39.214.127 at 2022-10-26 20:39:20 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.2ms)
