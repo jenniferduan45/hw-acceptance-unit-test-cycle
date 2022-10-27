@@ -154,7 +154,7 @@ PostgreSQL and SQLite 3.
 # Description of Contents
 
 The default directory structure of a generated Ruby on Rails application:
-
+```bash
   |-- app
   |   |-- assets
   |       |-- images
@@ -192,7 +192,7 @@ The default directory structure of a generated Ruby on Rails application:
       |-- assets
           `-- stylesheets
       `-- plugins
-
+```
 ### app
   Holds all the code that's specific to this particular application.
 
